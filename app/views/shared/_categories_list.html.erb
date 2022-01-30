@@ -1,0 +1,13 @@
+<ul class="list-group ">
+  <% tags.each do |tag| %>
+    <a href= '/categories/list/<%= tag.id %>' class="text-decoration-none text-reset" >
+    <li class="list-group-item d-flex justify-content-between align-items-center  w-25">
+      <%= tag.title %>
+      <span class="badge bg-primary rounded-pill">
+        <%= Film.joins(:film_tags).where('film_tags.tag_id = ?', tag.id).size %>
+      </span>
+    </li>
+    </a>
+  <% end %>
+</ul>
+

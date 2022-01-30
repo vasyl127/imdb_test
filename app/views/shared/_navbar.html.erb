@@ -7,7 +7,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav">
-          
+            <li class="nav-item">
+            <%= link_to 'Categories', '/categories/list', class: 'nav-link' %>
+            </li>
+            <% if user_signed_in? %>
+              <li class="nav-item">
+              <%= link_to 'Admin_panel', '/admin', class: 'nav-link' %>
+              </li>
+            <% end %>
           </ul>
           <ul class="navbar-nav ms-auto">
             <% if user_signed_in? %>

@@ -10,7 +10,7 @@
 <p><small class="text-muted">
   Tags:
     <% @film.tags.each do |tag| %>
-      <a href= "/categories/<%= tag.id %>" class='text-decoration-none text-reset' ><%= tag.title %></a>
+      <a href= "/categories/list/<%= tag.id %>" class='text-decoration-none text-reset' ><%= tag.title %></a>
     <% end %>
 </small></p>
 
@@ -20,7 +20,7 @@
 
 <p><%= @film.text %></p>
 
-<%= link_to 'Back', root_path, class: 'btn btn-outline-dark '%>
+<%= link_to 'Back', root_path, class: 'btn btn-outline-dark my-4'%>
 
 
 
