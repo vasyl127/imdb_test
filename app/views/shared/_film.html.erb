@@ -1,6 +1,5 @@
 <% films.each do |film| %>
-
-<div class="card mb-3 me-4" style="width: 18rem;">
+<div class="card mb-3 me-3" style="width: 18rem;">
   <a href="/films/<%= film.id %>">
   <% if film.img? %>
     <%= image_tag film.img.url, class: 'img-fluid rounded-start'%>
