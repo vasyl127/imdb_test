@@ -5,7 +5,41 @@ ActiveAdmin.register Film do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :title, :text, :img
+  permit_params :title, :text, :img, tag_ids: []
+
+
+  index do
+    selectable_column
+    id_column
+    column :title
+    column :text
+    column :tags
+    column :rating
+    column :users_voted
+    column :created_at
+    column :updated_at
+    column :img
+  end
+
+
+  show do
+    attributes_table do
+      row :title
+      row :text
+      row :img
+      row :tags
+    end
+  end
+
+    form do |f|
+      f.inputs "Add/Edit Article" do
+        f.input :title
+        f.input :text
+        f.input :tags, :as => :check_boxes
+        f.input :img
+      end
+      actions
+    end
   #
   # or
   #

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   root to: "page#Home"
-  resources :films, only: [:show]
+  get 'films/:id', to: 'film#show'
 
 
 end

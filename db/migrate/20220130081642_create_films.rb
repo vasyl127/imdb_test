@@ -3,8 +3,8 @@ class CreateFilms < ActiveRecord::Migration[6.1]
     create_table :films do |t|
       t.string :title
       t.text :text
-      t.integer :rating
-      t.integer :users_voted
+      t.integer :rating, default: 0
+      t.integer :users_voted, default: 0
 
       t.timestamps
     end
