@@ -5,5 +5,5 @@ class Film < ApplicationRecord
 
   validates :title, presence: true, length: { minimum: 2 }
   validates :text, presence: true, length: { minimum: 8 }
-  # validates :tags, presence: true
+  validates :tags, presence: true
 end

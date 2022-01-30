@@ -3,4 +3,8 @@ class PageController < ApplicationController
     # @films = Film.all
     @pagy, @films = pagy(Film.all)
   end
+
+  def test
+
+  end
 end

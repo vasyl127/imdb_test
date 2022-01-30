@@ -12,7 +12,6 @@ ActiveAdmin.register Film do
     selectable_column
     id_column
     column :title
-    column :text
     column :tags
     column :rating
     column :users_voted
