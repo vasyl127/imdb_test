@@ -1,27 +1,28 @@
 <% films.each do |film| %>
 
-<div class="card mb-3" style="width: 18rem;">
+<div class="card mb-3 me-4" style="width: 18rem;">
+  <a href="/films/<%= film.id %>">
   <% if film.img? %>
     <%= image_tag film.img.url, class: 'img-fluid rounded-start'%>
   <% else %>
     <%= image_tag "non_img.png", class: "img-fluid rounded-start" %>
   <% end %>
+  </a>
   <div class="card-body">
     <h5 class="card-title"><%= film.title %></h5>
-    <p class="card-text"><%= film.text %></p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">
-      <%= render 'shared/rating_stars', id: film.id, rating: film.rating %>
-    </li>
-    <li class="list-group-item">
-      <% film.tags.each do |tag| %>
-      <%= tag.title %>
-      <% end %>
-    </li>
-  </ul>
-  <div class="card-body">
-    <%= link_to 'More...', "/films/#{film.id}", class: 'btn btn-outline-dark btn-sm ' %>
+    <p class="card-text text-muted">
+      <small>
+      Tags:
+        <% film.tags.each do |tag| %>
+          <%= tag.title %>
+        <% end %>
+      </small>
+    </p>
+    <p class="card-text text-muted">
+      <small>
+        <%= render 'shared/rating_stars', id: film.id, rating: film.rating %>
+      </small>
+    </p>
   </div>
 </div>
 <% end %>

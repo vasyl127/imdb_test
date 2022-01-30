@@ -1,2 +1,28 @@
-<h4>Show</h4>
-  <%= link_to 'Back', root_path, class: 'btn btn-outline-dark ' %>
+
+<p><% if @film.img? %>
+  <%= image_tag @film.img.url, class: 'img-thumbnail rounded-start '%>
+<% else %>
+  <%= image_tag "non_img.png", class: "img-thumbnail rounded-start" %>
+<% end %></p>
+
+<h5><%= @film.title %></h5>
+
+<p><small class="text-muted">
+  Tags:
+    <% @film.tags.each do |tag| %>
+      <%= tag.title %>
+    <% end %>
+</small></p>
+
+<p class="card-text"><%= render 'shared/rating_stars', id: @film.id, rating: @film.rating %></p>
+
+<br>
+
+<p><%= @film.text %></p>
+
+<%= link_to 'Back', root_path, class: 'btn btn-outline-dark '%>
+
+
+
+
+
