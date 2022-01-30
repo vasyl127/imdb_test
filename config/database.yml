@@ -81,7 +81,10 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  database: imdb_test_production
-  username: imdb_test
-  password: <%= ENV['IMDB_TEST_DATABASE_PASSWORD'] %>
+  host: ec2-3-227-15-75.compute-1.amazonaws.com
+  adapter: postgresql
+  encoding: unicode
+  database: d213u3apc8701v
+  pool: 5
+  username: xneqqdblodwhaz
+  password: bb5af21a5203b4eff1b7342d1c44ccb82e3b9cd2f41f3956754008605da10aee
