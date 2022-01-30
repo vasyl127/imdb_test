@@ -14,7 +14,7 @@
       <small>
       Tags:
         <% film.tags.each do |tag| %>
-          <%= tag.title %>
+          <a href= "/categories/<%= tag.id %>" class='text-decoration-none text-reset' ><%= tag.title %></a>
         <% end %>
       </small>
     </p>
