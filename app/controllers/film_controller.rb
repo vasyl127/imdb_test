@@ -11,7 +11,7 @@ class FilmController < ApplicationController
     star = params[:star_id]
     film.update(rating: rating_formula(film.users_voted, film.rating, star))
     film.update(users_voted: film.users_voted+1)
-    redirect_to "/films/#{film.id}"
+    redirect_to '/'
   end
 
 
