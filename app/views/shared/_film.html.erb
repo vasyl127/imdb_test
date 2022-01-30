@@ -1,4 +1,9 @@
 <% films.each do |film| %>
+  <% if film.img? %>
+    <%= image_tag film.img.url, class: 'img-fluid rounded-start'%>
+  <% else %>
+    <%= image_tag "non_img.png", class: "img-fluid rounded-start" %>
+  <% end %>
   <p>
   Title:
   <%= film.title %>

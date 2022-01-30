@@ -25,6 +25,7 @@ gem 'bootstrap', '~> 5.1.3'
 gem 'devise'
 gem 'activeadmin'
 gem 'pagy', '~> 5.9'
+gem 'carrierwave', '~> 2.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

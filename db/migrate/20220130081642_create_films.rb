@@ -5,7 +5,6 @@ class CreateFilms < ActiveRecord::Migration[6.1]
       t.text :text
       t.integer :rating
       t.integer :users_voted
-      t.string :img
 
       t.timestamps
     end
