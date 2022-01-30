@@ -3,7 +3,5 @@ class PageController < ApplicationController
     @pagy, @films = pagy(Film.all)
   end
 
-  def test
-
-  end
+  def test; end
 end
