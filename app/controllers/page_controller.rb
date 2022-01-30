@@ -11,6 +11,9 @@ class PageController < ApplicationController
     @pagy, @films = pagy(Film.joins(:film_tags).where('film_tags.tag_id = ?', @tag.id))
   end
   
+  def personal_info
+    
+  end
 
   private
 
