@@ -1,5 +1,6 @@
 class FilmController < ApplicationController
   before_action :set_film, only: %i[show]
+  before_action :authenticate_user!, only: %i[rating_update]
 
   def show; end
 
