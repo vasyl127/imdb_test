@@ -1,4 +1,4 @@
-class FilmController < ApplicationController
+class FilmsController < ApplicationController
   before_action :set_film, only: %i[show rating_update]
   before_action :authenticate_user!, only: %i[rating_update]
 
@@ -8,7 +8,7 @@ class FilmController < ApplicationController
     star = params[:star_id]
     @film.update(rating: rating_formula(@film.users_voted, @film.rating, star))
     @film.update(users_voted: @film.users_voted + 1)
-    redirect_to '/'
+    redirect_to root_path
   end
 
   private

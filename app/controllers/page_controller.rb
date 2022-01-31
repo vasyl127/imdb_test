@@ -2,8 +2,8 @@ class PageController < ApplicationController
   before_action :set_tag, only: %i[categories]
 
   def Home
-    @pagy, @films = pagy(Film.all)
-    @tags = Tag.all
+    @tags = Tag.where(id: params[:tag_ids]) if params[:tag_ids]
+    @pagy, @films = pagy Film.all_by_tags(@tags)
   end
 
   def test

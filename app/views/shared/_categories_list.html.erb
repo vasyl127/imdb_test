@@ -1,6 +1,6 @@
 <ul class="list-group ">
   <% tags.each do |tag| %>
-    <a href= '/categories/list/<%= tag.id %>' class="text-decoration-none text-reset" >
+    <a href= '/?tag_ids=<%= tag.id %>' class="text-decoration-none text-reset" >
     <li class="list-group-item d-flex justify-content-between align-items-center  w-25">
       <%= tag.title %>
       <span class="badge bg-primary rounded-pill">
