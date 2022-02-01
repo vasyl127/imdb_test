@@ -1,4 +1,7 @@
 class Film < ApplicationRecord
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
   mount_uploader :img, ImgUploader
   has_many :film_tags, dependent: :destroy
   has_many :tags, through: :film_tags
@@ -12,5 +15,9 @@ class Film < ApplicationRecord
     films = includes(:film_tags, :tags)
     films = films.joins(:tags).where(tags: tag_ids) if tag_ids
     films.order(:created_at)
+  end
+
+  def should_generate_new_friendly_id?
+    title_changed?
   end
 end

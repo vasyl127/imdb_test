@@ -20,6 +20,7 @@ ActiveAdmin.register Film do
   show do
     attributes_table do
       row :title
+      row :slug
       row :text
       row :img
       row :rating

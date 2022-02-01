@@ -27,6 +27,8 @@ gem 'carrierwave', '~> 2.0'
 gem 'devise'
 gem 'mini_magick'
 gem 'pagy', '~> 5.9'
+gem 'friendly_id', '~> 5.4.0'
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

@@ -6,6 +6,13 @@ ActiveAdmin.setup do |config|
   #
   config.site_title = 'Imdb Test'
 
+  ActiveAdmin::ResourceController.class_eval do
+    def find_resource
+      finder = resource_class.is_a?(FriendlyId) ? :slug : :id
+      scoped_collection.find_by(finder => params[:id])
+    end
+  end
+
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
