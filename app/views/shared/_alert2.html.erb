@@ -1,0 +1,27 @@
+<% if notice %>
+  <div class="container">
+    <div class="row">
+      <div id="aui-flag-container" style="top:220px">
+        <div class="aui-flag" aria-hidden="false">
+          <div class="aui-message aui-message-error error closeable shadowed"><%= alert %><!-- .aui-message -->
+            <span class="aui-icon icon-close fa fa-close" role="button" tabindex="0"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<% if alert %>
+  <div class="container">
+    <div class="row">
+      <div id="aui-flag-container">
+        <div class="aui-flag" aria-hidden="false">
+          <div class="aui-message aui-message-success success closeable shadowed"><%= notice %><!-- .aui-message -->
+            <span class="aui-icon icon-close fa fa-close" role="button" tabindex="0"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

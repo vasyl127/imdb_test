@@ -11,7 +11,6 @@ class Film < ApplicationRecord
   scope :all_by_tags, ->(tag_ids) do
     films = includes(:film_tags, :tags)
     films = films.joins(:tags).where(tags: tag_ids) if tag_ids
-    # films = films.joins(:film_tags).where('film_tags.tag_id = ?', @tag.id) if tag_ids
     films.order(:created_at)
   end
 end

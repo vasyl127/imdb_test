@@ -7,7 +7,9 @@
   <% end %>
   </a>
   <div class="card-body">
-    <h5 class="card-title"><%= film.title %></h5>
+    <h5 class="card-title">
+      <%= link_to film.title, "/films/#{film.id}", class: 'text-decoration-none text-reset'%>
+    </h5>
     <p class="card-text text-muted">
       <small>
       Tags:
