@@ -1,9 +1,9 @@
 <div class="card mx-3 mb-4 text-white bg-dark" style="width: 18rem;">
   <a href="/films/<%= film.id %>">
   <% if film.img? %>
-    <%= image_tag film.img.url, class: 'img-fluid rounded mx-auto mt-3', style: "height: 20rem;"%>
+    <%= image_tag film.img.url, class: 'img-fluid rounded mx-auto mt-3', style: "height: auto;"%>
   <% else %>
-    <%= image_tag "non_img.png", class: "img-fluid rounded-start" %>
+    <%= image_tag "non_img.png", class: "img-fluid rounded-start mx-auto mt-3" %>
   <% end %>
   </a>
   <div class="card-body">
