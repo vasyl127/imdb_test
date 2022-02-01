@@ -9,9 +9,7 @@
 
 <p><small class="text-muted">
   Tags:
-    <% @film.tags.each do |tag| %>
-      <a href= "/categories/list/<%= tag.id %>" class='text-decoration-none text-reset' ><%= tag.title %></a>
-    <% end %>
+    <%= render @film.tags %>
 </small></p>
 
 <p class="card-text"><%= render 'shared/rating_stars', id: @film.id, rating: @film.rating %></p>

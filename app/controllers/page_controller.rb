@@ -7,20 +7,12 @@ class PageController < ApplicationController
     @pagy, @films = pagy Film.all_by_tags(@tags)
   end
 
-  def test
-    @tags = Tag.all
-  end
-
   def categories
     @pagy, @films = pagy(Film.joins(:film_tags).where('film_tags.tag_id = ?', @tag.id))
   end
   
   def personal_info
     
-  end
-
-  def categories_list
-    @tags = Tag.all
   end
 
   def tag_repeat(tag_id)
