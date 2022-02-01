@@ -6,23 +6,24 @@ ActiveAdmin.register Film do
   #
   permit_params :title, :text, :img, tag_ids: []
 
-  # index do
-  #   selectable_column
-  #   id_column
-  #   column :title
-  #   column :tags
-  #   column :rating
-  #   column :users_voted
-  #   column :created_at
-  #   column :updated_at
-  #   column :img
-  # end
+  index do
+    selectable_column
+    id_column
+    column :title
+    column :tags
+    column :updated_at
+    column :img
+    actions
+
+  end
 
   show do
     attributes_table do
       row :title
       row :text
       row :img
+      row :rating
+      row :users_voted
       row :tags
     end
   end
