@@ -3,6 +3,7 @@ class PageController < ApplicationController
 
   def Home
     @tags = Tag.where(id: params[:tag_ids]) if params[:tag_ids]
+    @categories = Tag.all
     @pagy, @films = pagy Film.all_by_tags(@tags)
   end
 

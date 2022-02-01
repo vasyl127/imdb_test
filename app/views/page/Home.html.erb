@@ -1,7 +1,18 @@
 
-
-<div class="row">
-  <%= render @films %>
+<div class='container'>
+  <div class="row">
+    <div class='col-2' >
+      <%= render 'shared/categories_list', tags: @categories %>
+    </div>
+    <div class='col-10' >
+      <div class="row ">
+        <%= render @films %>
+      </div>
+    </div>
+  </div>
 </div>
-<%== pagy_bootstrap_nav(@pagy) %>
 
+
+<div class="d-flex justify-content-center">
+<%== render partial: 'pagy/bootstrap_nav', locals: {pagy: @pagy} %>
+</div>

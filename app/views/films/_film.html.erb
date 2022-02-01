@@ -1,7 +1,7 @@
-<div class="card mb-3 me-3" style="width: 18rem;">
+<div class="card mx-3 mb-4 text-white bg-dark" style="width: 18rem;">
   <a href="/films/<%= film.id %>">
   <% if film.img? %>
-    <%= image_tag film.img.url, class: 'img-fluid rounded-start'%>
+    <%= image_tag film.img.url, class: 'img-fluid rounded mx-auto mt-3', style: "height: 20rem;"%>
   <% else %>
     <%= image_tag "non_img.png", class: "img-fluid rounded-start" %>
   <% end %>
@@ -14,7 +14,7 @@
         <%= render film.tags %>
       </small>
     </p>
-    <p class="card-text text-muted">
+    <p class="card-text text-muted mb-3">
       <small>
         <%= render 'shared/rating_stars', id: film.id, rating: film.rating %>
       </small>

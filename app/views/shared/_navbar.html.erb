@@ -6,19 +6,10 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-            <%= link_to 'Categories', '/categories', class: 'nav-link' %>
-            </li>
-
-          </ul>
           <ul class="navbar-nav ms-auto">
             <% if user_signed_in? %>
               <li class="nav-item">
               <%= link_to current_user.username, '/personal_info', class: 'nav-link' %>
-              </li>
-              <li class="nav-item">
-              <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
               </li>
             <% else %>
               <li class="nav-item">

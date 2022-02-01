@@ -14,7 +14,7 @@ require 'pagy/extras/bootstrap'
 # Instance variables
 # See https://ddnexus.github.io/pagy/api/pagy#instance-variables
 # Pagy::DEFAULT[:page]   = 1                                  # default
-Pagy::DEFAULT[:items] = 4 # default
+Pagy::DEFAULT[:items] = 6 # default
 # Pagy::DEFAULT[:outset] = 0                                  # default
 
 # Other Variables
@@ -199,14 +199,14 @@ Pagy::DEFAULT[:items] = 4 # default
 #
 # Examples:
 # load the "de" built-in locale:
-# Pagy::I18n.load(locale: 'de')
+# Pagy::I18n.load(locale: 'en')
 #
 # load the "de" locale defined in the custom file at :filepath:
-# Pagy::I18n.load(locale: 'de', filepath: 'path/to/pagy-de.yml')
+Pagy::I18n.load(locale: 'en', filepath: 'config/locales/pagy.en.yml')
 #
 # load the "de", "en" and "es" built-in locales:
 # (the first passed :locale will be used also as the default_locale)
-# Pagy::I18n.load({ locale: 'de' },
+# Pagy::I18n.load({ locale: 'en' })
 #                 { locale: 'en' },
 #                 { locale: 'es' })
 #
