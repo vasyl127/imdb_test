@@ -24,12 +24,11 @@ gem 'jbuilder', '~> 2.7'
 gem 'activeadmin'
 gem 'bootstrap', '~> 5.1.3'
 gem 'carrierwave', '~> 2.0'
-gem "fog-google"
 gem 'devise'
+gem 'fog-google'
+gem 'friendly_id', '~> 5.4.0'
 gem 'mini_magick'
 gem 'pagy', '~> 5.9'
-gem 'friendly_id', '~> 5.4.0'
-
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

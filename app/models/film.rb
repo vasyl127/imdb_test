@@ -10,12 +10,11 @@ class Film < ApplicationRecord
   validates :text, presence: true, length: { minimum: 8 }
   validates :tags, presence: true
 
-
-  scope :all_by_tags, ->(tag_ids) do
+  scope :all_by_tags, lambda { |tag_ids|
     films = includes(:film_tags, :tags)
     films = films.joins(:tags).where(tags: tag_ids) if tag_ids
     films.order(:created_at)
-  end
+  }
 
   def should_generate_new_friendly_id?
     title_changed?

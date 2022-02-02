@@ -14,7 +14,6 @@ ActiveAdmin.register Film do
     column :updated_at
     column :img
     actions
-
   end
 
   show do

@@ -10,10 +10,8 @@ class PageController < ApplicationController
   def categories
     @pagy, @films = pagy(Film.joins(:film_tags).where('film_tags.tag_id = ?', @tag.id))
   end
-  
-  def personal_info
-    
-  end
+
+  def personal_info; end
 
   def tag_repeat(tag_id)
     Film.joins(:film_tags).where('film_tags.tag_id = ?', tag_id).size
@@ -24,6 +22,4 @@ class PageController < ApplicationController
   def set_tag
     @tag = Tag.find(params[:tag_id])
   end
-
-
 end
