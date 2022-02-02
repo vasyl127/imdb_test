@@ -9,7 +9,7 @@
     <li class="list-group-item d-flex justify-content-between align-items-center w-auto text-white bg-dark">
       <%= tag.title %>
       <span class="badge bg-warning rounded-pill">
-        <%= Film.joins(:film_tags).where('film_tags.tag_id = ?', tag.id).size %>
+        <%= tag_in_use(tag.id) %>
       </span>
     </li>
     </a>

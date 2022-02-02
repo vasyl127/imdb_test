@@ -29,6 +29,9 @@ gem 'fog-google'
 gem 'friendly_id', '~> 5.4.0'
 gem 'mini_magick'
 gem 'pagy', '~> 5.9'
+gem 'ratyrate'
+gem 'jquery'
+gem 'jquery-rails'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

@@ -10,6 +10,7 @@ categories.each do |categ|
   Tag.create(title: categ)
 end
 
-# (1..50).each do |i|
-#   Film.create(title: "Test film name with name ##{i}", text: "Test film name with name ##{i} And moreeee text for testtt" )
-# end
+(1..50).each do |i|
+  Film.create(title: "Test film name with name ##{i}", text: "Test film name with name ##{i} And moreeee text for testtt",
+                users_voted: 0, rating: 0 )
+end
