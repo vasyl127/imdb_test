@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'activeadmin'
 gem 'bootstrap', '~> 5.1.3'
 gem 'carrierwave', '~> 2.0'
+gem "fog-google"
 gem 'devise'
 gem 'mini_magick'
 gem 'pagy', '~> 5.9'

@@ -1,6 +1,6 @@
 if Rails.env.development?
-  AdminUser.create!(email: 'admin@example.com', password: 'admin123',
-                    password_confirmation: 'admin123')
+  AdminUser.create!(email: 'admin@example.com', password: 'NbgjGfcc!23',
+                    password_confirmation: 'NbgjGfcc!23')
 end
 
 categories = %w[Action Comedy Drama Fantasy Horror Mystery Romance
